@@ -35,11 +35,7 @@ javascript:(function() {
     let likeCount = 0; // 点赞计数器
     const maxLikes = 1000; // 点赞次数，单个主播每天最多点赞1000次
     const msg1 = `开始点赞×${maxLikes}，${getCurrentTime()}`;
-
-    // 添加1秒延时发送消息
-    setTimeout(() => {
-        sendMessage(msg1);
-    }, 1000); // 1000毫秒（1秒）延迟
+    sendMessage(msg1);
 
     const likeIntervalId = setInterval(() => {
         const likeButton = document.querySelector(likeButtonSelector); // 获取点赞按钮
